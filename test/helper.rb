@@ -1,34 +1,12 @@
-require 'simplecov'
+# test/test_helper.rb
 
-module SimpleCov::Configuration
-  def clean_filters
-    @filters = []
-  end
-end
+# Library
+require_relative '../lib/rottentom'
 
-SimpleCov.configure do
-  clean_filters
-  load_adapter 'test_frameworks'
-end
+# Dependencies
+require 'minitest/autorun'
+require 'pp'
 
-ENV["COVERAGE"] && SimpleCov.start do
-  add_filter "/.rvm/"
-end
-require 'rubygems'
-require 'bundler'
-begin
-  Bundler.setup(:default, :development)
-rescue Bundler::BundlerError => e
-  $stderr.puts e.message
-  $stderr.puts "Run `bundle install` to install missing gems"
-  exit e.status_code
-end
-require 'test/unit'
-require 'shoulda'
-
-$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
-$LOAD_PATH.unshift(File.dirname(__FILE__))
-require 'rottentom'
-
-class Test::Unit::TestCase
+describe "Test Constants" do
+  API_KEY = File.open('test/api_key').read
 end
