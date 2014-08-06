@@ -80,6 +80,7 @@ DEPENDENCIES
   hashie
   httparty
   jeweler (~> 2.0.1)
+  json
   rdoc (~> 3.12)
   shoulda
   simplecov

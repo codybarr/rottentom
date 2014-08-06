@@ -17,7 +17,7 @@ Jeweler::Tasks.new do |gem|
   gem.name = "rottentom"
   gem.homepage = "http://github.com/codybarr/rottentom"
   gem.license = "MIT"
-  gem.summary = %Q{ `Ruby wrapper for the Rotten Tomatoes API }
+  gem.summary = %Q{ Ruby wrapper for the Rotten Tomatoes API }
   gem.description = %Q{ Ruby wrapper for the Rotten Tomatoes API }
   gem.email = "cody.barr@gmail.com"
   gem.authors = ["Cody Barr"]
