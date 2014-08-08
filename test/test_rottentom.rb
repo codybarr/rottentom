@@ -13,7 +13,7 @@ describe RT::DVD do
   end
 
   describe ".new_releases" do
-    let (:new_dvds) { RT::DVD.current }
+    let (:new_dvds) { RT::DVD.new_releases }
 
     it "should return results" do
       new_dvds.first.release_dates.dvd.wont_be_empty

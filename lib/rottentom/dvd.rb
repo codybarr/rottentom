@@ -9,7 +9,7 @@ module RT
       results.collect! { |movie| Hashie::Mash.new(movie) }
     end
 
-    def self.current(options = {})
+    def self.new_releases(options = {})
       options.merge!(apikey: RT::API.api_key)
 
       results = RT::API.get("/v1.0/lists/dvds/new_releases.json", query: options)
