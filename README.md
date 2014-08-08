@@ -14,8 +14,12 @@ gem install rottentom
 require 'rottentom'
 
 RT::API.api_key = "#{your_api_key}"
+
 upcoming_dvds = RT::DVD.upcoming
 # => results
+
+RT::DVD.current
+RT::DVD.new_releases
 ```
 
 ## Copyright
